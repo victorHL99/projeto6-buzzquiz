@@ -1,25 +1,26 @@
-*{
+* {
     box-sizing: border-box;
-    --cor-header:
+    overflow-x: hidden;
+
 }
 
 /* font-family: 'Roboto', sans-serif; */
 
 /*--------------- HEADER ---------------*/
 
-header{
+header {
     width: 100vw;
     height: 69px;
     left: 0px;
     top: 0px;
     background-color: #EC362D;
-    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25) ;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header > .titulo{
+header>.titulo {
     font-family: 'Roboto', sans-serif;
     width: 176px;
     height: 43px;
@@ -35,15 +36,23 @@ header > .titulo{
 /*--------------- MAIN ---------------*/
 
 main {
-    background-color: aqua;
+    background-color: #FAFAFA;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    overflow-x: hidden;
 
 }
 
-.quizz-usuario{
+.lista-quizz {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 18px;
+    
+}
+
+.quizz-usuario {
     width: 340px;
     height: 181px;
     background-color: #FAFAFA;
@@ -58,7 +67,7 @@ main {
 
 }
 
-.quizz-usuario >p{
+.quizz-usuario>p {
     width: 250px;
     height: 107px;
     font-family: 'Roboto', sans-serif;
@@ -72,7 +81,7 @@ main {
     color: #b9b9b9;
 }
 
-.criar-quizz{
+.criar-quizz {
     width: 151px;
     height: 40px;
     background-color: #FAFAFA;
@@ -84,7 +93,7 @@ main {
     align-items: center;
 }
 
-.criar-quizz >p{
+.criar-quizz > p {
     width: 136px;
     height: 40px;
     font-family: 'Roboto', sans-serif;
@@ -97,5 +106,54 @@ main {
     justify-content: center;
     text-align: center;
     color: #EC362D;
+    border: none;
 }
 
+.todos-quizz {
+    width: 340px;
+    height: auto;
+    margin-top: 35px;
+    
+}
+
+.todos-quizz>h2 {
+    width: 158px;
+    height: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.imagem-quizz{
+    width: 340px;
+    height: 181px;
+    margin-top: 14px;
+    border-radius: 5px;
+    background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0)0%,
+    rgba(0, 0, 0, 0.1)95.58%,
+    #000000 100%),
+    url(/imgteste/Rectangle\ 34.png);
+    
+}
+
+.titulo-quizz{
+    width: 301px;
+    height: 54px;
+    margin-left: 36px;
+    margin-top: 120px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}

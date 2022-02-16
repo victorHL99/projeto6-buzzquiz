@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuzzQuizz</title>
     <!--Reset CSS-->
-    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="styles/reset.css">
 
     <!--Folha de estilos pag 1-->
-    <link rel="stylesheet" href="/styles/stylesSC1.css">
+    <link rel="stylesheet" href="styles/stylesSC1.css">
 
     <!--Fonte ROBOTO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,20 +29,31 @@
 
     <!-- CORPO-->
     <main>
-        <div class="quizz-usuario">
-            <p>
-                Você não criou nenhum quizz ainda :(
-            </p>
-            <div class="criar-quizz">
-                <p>Criar Quizz</p> 
+        <div class="lista-quizz">
+            <div class="quizz-usuario">
+                <p>
+                    Você não criou nenhum quizz ainda :(
+                </p>
+                <div class="criar-quizz">
+                    <p>Criar Quizz</p>
+                </div>
             </div>
-
             <div class="todos-quizz">
-
+                <h2>Todos os Quizzes</h2>
+                <div class="lista-quizz-servidor">
+                    <div class="display-quizz">
+                        <div class="imagem-quizz">
+                            <div class="titulo-quizz">Acerte os personagens corretos dos Simpsons e prove seu amor!
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
-
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="JS/scriptSC1.js"></script>
 </body>
 
 </html>
