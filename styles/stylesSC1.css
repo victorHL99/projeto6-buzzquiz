@@ -19,7 +19,7 @@ header{
     align-items: center;
 }
 
-header >div{
+header > .titulo{
     font-family: 'Roboto', sans-serif;
     width: 176px;
     height: 43px;
@@ -31,3 +31,71 @@ header >div{
     line-height: 43px;
     color: #FFFFFF;
 }
+
+/*--------------- MAIN ---------------*/
+
+main {
+    background-color: aqua;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.quizz-usuario{
+    width: 340px;
+    height: 181px;
+    background-color: #FAFAFA;
+    margin-top: 33px;
+    border: 1px dashed #D5D5D5;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.quizz-usuario >p{
+    width: 250px;
+    height: 107px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #b9b9b9;
+}
+
+.criar-quizz{
+    width: 151px;
+    height: 40px;
+    background-color: #FAFAFA;
+    border: 1px dashed #EC362D;
+    box-sizing: border-box;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.criar-quizz >p{
+    width: 136px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #EC362D;
+}
+
