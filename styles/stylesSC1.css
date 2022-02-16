@@ -18,6 +18,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 1;
 }
 
 header>.titulo {
@@ -33,13 +35,15 @@ header>.titulo {
     color: #FFFFFF;
 }
 
-/*--------------- MAIN ---------------*/
+/*--------------- MAIN - TELA 1 ---------------*/
 
-main {
+.tela-um {
     background-color: #FAFAFA;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    margin-top: 69px;
+    z-index: 1;
 
 }
 
@@ -106,7 +110,7 @@ main {
     justify-content: center;
     text-align: center;
     color: #EC362D;
-    border: none;
+    overflow: hidden;
 }
 
 .todos-quizz {
@@ -138,7 +142,7 @@ main {
     linear-gradient(180deg, rgba(255, 255, 255, 0)0%,
     rgba(0, 0, 0, 0.1)95.58%,
     #000000 100%),
-    url(/imgteste/Rectangle\ 34.png);
+    url(/imgteste/as-20-melhores-praias-do-brasil.png);
     
 }
 
@@ -156,4 +160,112 @@ main {
     display: flex;
     align-items: center;
     color: #FFFFFF;
+}
+
+/*--------------- MAIN - TELA 2 ---------------*/
+
+.tela-dois{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 69px;
+    background-color: #FAFAFA;
+    z-index: 2;
+}
+
+.topo-quizz{
+    width: 375px;
+    height: 142px;
+    background: 
+    linear-gradient(0deg,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url(/imgteste/as-20-melhores-praias-do-brasil.png);
+}
+
+.topo-quizz >p{
+    width: 309px;
+    height: 54px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 33px;
+    margin-top: 44px;
+}
+
+.pergunta-quizz{
+    width: 100vw;
+    height: 436px;
+    background-color: #b9b9b9;
+    margin-top:  24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topo-pergunta-quizz{
+    width: 340px;
+    height: 89px;
+    margin-top: 18px;
+    background-color: #434CA0;
+}
+
+.topo-pergunta-quizz >p{
+    width: 308px;
+    height: 54px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 16px;
+    margin-top: 20px;
+}
+
+.respostas-pergunta-quizz{
+    width: 340px;
+    height: 316px;
+    margin-top: 12px;
+    background-color: red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.alternativa-respostas-pergunta-quizz{
+    width: 163px;
+    height: 140px;
+}
+.alternativa-respostas-pergunta-quizz > .img{
+    width: 163px;
+    height:113px;
+    background-image: url(/imgteste/image\ 3.png);
+
+}
+
+.alternativa-respostas-pergunta-quizz > p{
+    width: 163px;
+    height: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-top: 5px;
 }
