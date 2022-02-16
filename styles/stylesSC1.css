@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    --cor-header:
+}
+
+/* font-family: 'Roboto', sans-serif; */
+
+/*--------------- HEADER ---------------*/
+
+header{
+    width: 100vw;
+    height: 69px;
+    left: 0px;
+    top: 0px;
+    background-color: #EC362D;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header >div{
+    font-family: 'Roboto', sans-serif;
+    width: 176px;
+    height: 43px;
+    left: 100px;
+    top: 13px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 37px;
+    line-height: 43px;
+    color: #FFFFFF;
+}
