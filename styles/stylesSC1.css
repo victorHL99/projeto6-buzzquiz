@@ -182,7 +182,7 @@ header>.titulo {
     url(/imgteste/as-20-melhores-praias-do-brasil.png);
 }
 
-.topo-quizz >p{
+.topo-quizz p{
     width: 309px;
     height: 54px;
     font-family: 'Roboto', sans-serif;
@@ -249,14 +249,42 @@ header>.titulo {
     width: 163px;
     height: 140px;
 }
-.alternativa-respostas-pergunta-quizz > .img{
+.alternativa-respostas-pergunta-quizz  .img{
     width: 163px;
     height:113px;
     background-image: url(/imgteste/image\ 3.png);
 
 }
 
-.alternativa-respostas-pergunta-quizz > p{
+.alternativa-respostas-pergunta-quizz  p{
+    width: 163px;
+    height: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.diminui-opacidade{
+    opacity: 0.3;
+}
+
+.alternativa-escolhida{
+    width: 163px;
+    height: 140px;
+}
+.alternativa-escolhida  .img{
+    width: 163px;
+    height:113px;
+    background-image: url(/imgteste/image\ 3.png);
+
+}
+.alternativa-escolhida  p{
     width: 163px;
     height: 22px;
     font-family: 'Roboto', sans-serif;
