@@ -104,7 +104,7 @@ function nextPrev(n) {
 
 function validateForm() {
     // Valida os inputs para saber se está tudo certo
-    let x, y, i, titulo,quantidadePergunta, valid = true;
+    let x, y, i, titulo, quantidadePergunta, valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
     url = String(document.getElementById("url1").value);
@@ -121,8 +121,8 @@ function validateForm() {
             valid = false;
         }
     }
-    if(titulo < 20 || titulo > 65 || quantidadePergunta < 3 || urlCheck == false || quantidadeNivel < 2){
-        valid= false
+    if (titulo < 20 || titulo > 65 || quantidadePergunta < 3 || urlCheck == false || quantidadeNivel < 2) {
+        valid = false
     }
     if (valid == false) {
         alert("Por favor insira os dados novamentes")
@@ -141,4 +141,19 @@ function fixStepIndicator(n) {
         x[i].className = x[i].className.replace(" active", "");
     }
     x[n].className += " active";
+}
+
+var dropdown = document.getElementsByClassName("dropdown");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
 }
