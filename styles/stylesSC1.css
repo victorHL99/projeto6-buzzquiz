@@ -377,7 +377,6 @@ header>.titulo {
     width: 100vw;
     height: 100vh;
     margin-top: 69px;
-    background-color: purple;
     z-index: 2;
 }
 
@@ -417,12 +416,12 @@ header>.titulo {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:purple;
     margin-top: 89px;
 }
 
 .container-pergunta {
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 158px;
     background-color: #FFFFFF;
@@ -468,6 +467,7 @@ input.invalid {
     line-height: 21px;
     color: #FFF5F4;
     position: absolute;
+    z-index: 3;
 }
 
 .tab {
