@@ -13,9 +13,11 @@ function obterQuizz() {
 }
 obterQuizz();
 
-function abrirTelaDois() {
+
+/* Função para mostrar a tela dois quando clicar no quizz */
+function abrirTelaDois(){
     let corpo = document.querySelector("main")
-    corpo.innerHTML = `<div class="tela-dois">
+    corpo.innerHTML = ` <div class="tela-dois">
     <div class="topo-quizz">
         <p>Você entende bem sobre as praias do Brasil?</p>
     </div>
@@ -25,21 +27,21 @@ function abrirTelaDois() {
             <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
         </div>
         <div class="respostas-pergunta-quizz">
-            <div class="alternativa-respostas-pergunta-quizz">
+            <div  onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
                 <div class="img"></div>
-                <p>Gatíneo</p>
+                <p>Gatíneo 1</p>
             </div>
-            <div class="alternativa-respostas-pergunta-quizz">
+            <div onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
                 <div class="img"></div>
-                <p>Gatíneo</p>
+                <p>Gatíneo 2</p>
             </div>
-            <div class="alternativa-respostas-pergunta-quizz">
+            <div onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
                 <div class="img"></div>
-                <p>Gatíneo</p>
+                <p>Gatíneo 3 </p>
             </div>
-            <div class="alternativa-respostas-pergunta-quizz">
+            <div onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
                 <div class="img"></div>
-                <p>Gatíneo</p>
+                <p>Gatíneo 4</p>
             </div>
         </div>
     </div>`
