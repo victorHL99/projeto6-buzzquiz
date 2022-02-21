@@ -11,7 +11,7 @@ function obterQuizz() {
     const promiseQuizz = axios.get('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes');
     promiseQuizz.then(console.log)
     promiseQuizz.then(mostrarQuizzes)
-    
+
 }
 obterQuizz();
 
@@ -25,7 +25,7 @@ function mostrarQuizzes(resposta) {
 
     imagemQuizz.src = resposta.data[i].image
     tituloQuizz.src = resposta.data[i].title
-    
+
     todosQuizzes.innerHTML = ``
     for (i; i < tamanhoArray; i++) {
         todosQuizzes.innerHTML += `
@@ -104,24 +104,81 @@ function nextPrev(n) {
 
 function validateForm() {
     // Valida os inputs para saber se está tudo certo
-    let x, y, i, titulo, quantidadePergunta, valid = true;
+    let x, y, i, titulo, quantidadePergunta, url, url2, url3, url4, url5, corFundo, textopergunta2, valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
     url = String(document.getElementById("url1").value);
+    url2 = String(document.getElementById("url2").value);
+    url3 = String(document.getElementById("url3").value);
+    url4 = String(document.getElementById("url4").value);
+    url5 = String(document.getElementById("url5").value);
     titulo = String(document.getElementById("titulo-pergunta").value).length;
+    corFundo = String(document.getElementById("cor-de-fundo").value);
     quantidadePergunta = parseInt(document.getElementById("quantidade-perguntas").value)
     quantidadeNivel = parseInt(document.getElementById("quantidade-nivel").value)
+    textopergunta2 = String(document.getElementById("texto-pergunta2").value).length
+    let colorCheck = corFundo.includes("#")
     let urlCheck = url.includes("https://")
+    let urlCheck2 = url2.includes("https://")
+    let urlCheck3 = url3.includes("https://")
+    let urlCheck4 = url4.includes("https://")
+    let urlCheck5 = url5.includes("https://")
+
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
-        if (y[i].value == "") {
+        if (y[i].value == "" && currentTab == 0) {
             // adiciona classe invalid:
             y[i].className += " invalid";
             // e coloca o status de valid como false:
             valid = false;
         }
+        else{
+            valid = true
+        }
     }
-    if (titulo < 20 || titulo > 65 || quantidadePergunta < 3 || urlCheck == false || quantidadeNivel < 2) {
+    if (currentTab == 0 && titulo < 20) {
+        valid = false
+    }
+    if (currentTab == 0 && titulo > 65) {
+        valid = false
+    }
+    if (currentTab == 0 && urlCheck == false) {
+        valid = false
+    }
+    if (currentTab == 1 && quantidadePergunta < 3) {
+        valid = false
+    }
+    if (currentTab == 1 && quantidadeNivel < 2) {
+        valid = false
+    }
+    if (currentTab == 1 && typeof quantidadeNivel !== 'number') {
+        valid = false
+    }
+    if (currentTab == 1 && typeof quantidadePergunta !== 'number') {
+        valid = false
+    }
+    if (currentTab == 1 && textopergunta2 < 20) {
+        valid = false
+    }
+    if (currentTab == 1 && colorCheck == false) {
+        valid = false
+    }
+    if (currentTab == 1 && parseInt(corFundo.length) < 7) {
+        valid = false
+    }
+    if (currentTab == 1 && corFundo.indexOf('FFFFFF') > -1 == false) {
+        valid = false
+    }
+    if (currentTab == 1 && urlCheck2 == false) {
+        valid = false
+    }
+    if (currentTab == 1 && urlCheck3 == false) {
+        valid = false
+    }
+    if (currentTab == 1 && urlCheck4 == false) {
+        valid = false
+    }
+    if (currentTab == 1 && urlCheck5 == false) {
         valid = false
     }
     if (valid == false) {

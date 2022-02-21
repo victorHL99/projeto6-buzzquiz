@@ -134,12 +134,13 @@ header>.titulo {
     text-align: center;
 }
 
-.imagem-quizz{
+.imagem-quizz {
     width: auto;
     height: auto;
     margin-top: 14px;
 }
-.imagem-quizz  img{
+
+.imagem-quizz img {
     width: 340px;
     height: 181px;
     border-radius: 5px;
@@ -467,7 +468,6 @@ input.invalid {
     line-height: 21px;
     color: #FFF5F4;
     position: absolute;
-    z-index: 3;
 }
 
 .tab {
@@ -527,12 +527,16 @@ input.invalid {
 
 }
 
-.espaçamento{
+.espaçamento {
     width: 100%;
-    height: 54px;
-    background-color: blue;
+    height: 32px;
 }
+
 /* Mark the active step: */
+.step {
+    margin-top: 90px;
+}
+
 .step.active {
     opacity: 1;
 }
