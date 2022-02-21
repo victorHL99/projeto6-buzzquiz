@@ -14,6 +14,13 @@ function esbranquicarAlternativas(){
     adicionarOpacidade[i].classList.add("diminui-opacidade")
     }
 }
-// deve receber cor vermelha ou verde, de acordo com resposta certa ou errada
+
+function verificarResposta(){
+    // deve receber cor vermelha ou verde, de acordo com resposta certa ou errada
+
+    // se a resposta possuir a tag de isCorrectAnswer === true adicionar a classe resposta certa
+    // se a respota possuir a tag isCorrectAnswer === false adicionar a tag de de respota errada
+}
 
 // após 2 segundos deve passar para a proxima pergunta 
+
