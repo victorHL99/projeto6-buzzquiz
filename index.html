@@ -32,7 +32,7 @@
         <!--ESCOPO TELA NUMERO 1-->
         <div class="tela-um">
             <div class="lista-quizz">
-                <div class="quizz-usuario">
+                <div class="quizz-usuario" data-identifier="user-quizzes">
                     <p>
                         Você não criou nenhum quizz ainda :(
                     </p>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="todos-quizz">
                     <h2>Todos os Quizzes</h2>
-                    <div class="lista-quizz-servidor">
+                    <div class="lista-quizz-servidor" data-identifier="general-quizzes">
                         <div class="loader"></div>
                         <div class="display-quizz" onclick="abrirTelaDois()">
                             <div class="imagem-quizz">
@@ -170,7 +170,7 @@
                             <p>zzz</p>
                         </div>
                         <div class="botao">
-                            <button class="criar-prosseguir" type="button" id="nextBtn" onclick="nextPrev(1)">Prosseguir
+                            <button class="criar-prosseguir" type="button" id="nextBtn" onclick="nextPrev(1)" data-identifier="create-quizz">Prosseguir
                                 pra
                                 criar perguntas</button>
                         </div>

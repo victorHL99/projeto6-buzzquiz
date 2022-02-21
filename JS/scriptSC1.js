@@ -45,13 +45,12 @@ function mostrarQuizzes(resposta) {
     }
     
     console.log(teste)
-    
+    //checar essa parte pra correção
     banner.innerHTML += `
     <img src=${teste.image} alt="">
-    <div class="titulo-quizz-banner">${teste.title}</div>
+    <div class="titulo-quizz-banner" data-identifier="quizz-card">${teste.title}</div> 
     
     `
-
     
 
 }
