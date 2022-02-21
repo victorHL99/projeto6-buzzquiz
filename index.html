@@ -99,66 +99,70 @@
         <!--ESCOPO TELA NUMERO 3-->
         <!-- <div class="tela-tres">
             <form class="criar-quizzes escondido">
-                <div class="pergunta-criar1">
-                    <div class="container-pergunta ">
-                        <div class="tab">
-                            <div class="topo-criar">
-                                <p> Comece pelo começo </p>
+                    <div class="pergunta-criar1">
+                        <div class="container-pergunta ">
+                            <div class="tab">
+                                <div class="topo-criar">
+                                    <p> Comece pelo começo </p>
+                                </div>
+                                <p><input placeholder="Título do seu quizz" oninput="this.className = ''"></p>
+                                <p><input class="url" placeholder="URL da imagem do seu quizz"
+                                        oninput="this.className = ''"></p>
+                                <p><input placeholder="Quantidade de perguntas do quizz" oninput="this.className = ''">
+                                </p>
+                                <p><input placeholder="Quantidade de níveis do quizz" oninput="this.className = ''"></p>
+
                             </div>
-                            <p><input placeholder="Título do seu quizz" oninput="this.className = ''"></p>
-                            <p><input class="url" placeholder="URL da imagem do seu quizz"
-                                    oninput="this.className = ''"></p>
-                            <p><input placeholder="Quantidade de perguntas do quizz" oninput="this.className = ''"></p>
-                            <p><input placeholder="Quantidade de níveis do quizz" oninput="this.className = ''"></p>
 
-                        </div>
-
-                        <div class="tab">
-                            <div class="topo-criar">
-                                <p> Comece pelo começo </p>
+                            <div class="tab">
+                                <div class="topo-criar">
+                                    <p> Comece pelo começo </p>
+                                </div>
+                                <h> Pergunta 1 </h>
+                                <p><input placeholder="Texto da pergunta" oninput="this.className = ''"></p>
+                                <p><input placeholder="Cor de fundo da pergunta" oninput="this.className = ''"></p>
+                                <h> Resposta correta </h>
+                                <p><input placeholder="Resposta correta" oninput="this.className = ''"></p>
+                                <p><input class="url" placeholder="URL da imagem" oninput="this.className = ''"></p>
+                                <h> Respostas incorretas </h>
+                                <p><input placeholder="Resposta incorreta 1" oninput="this.className = ''"></p>
+                                <p><input class="url" placeholder="URL da imagem 1" oninput="this.className = ''"></p>
+                                <div class="espaçamento"></div>
+                                <p><input placeholder="Resposta incorreta 2" oninput="this.className = ''"></p>
+                                <p><input class="url" placeholder="URL da imagem 2" oninput="this.className = ''"></p>
+                                <div class="espaçamento"></div>
+                                <p><input placeholder="Resposta incorreta 3" oninput="this.className = ''"></p>
+                                <p><input class="url" placeholder="URL da imagem 3" oninput="this.className = ''"></p>
                             </div>
-                            <h> Pergunta 1 </h>
-                            <p><input placeholder="Texto da pergunta" oninput="this.className = ''"></p>
-                            <p><input placeholder="Cor de fundo da pergunta" oninput="this.className = ''"></p>
-                            <h> Resposta correta </h>
-                            <p><input placeholder="Resposta correta" oninput="this.className = ''"></p>
-                            <p><input class="url" placeholder="URL da imagem" oninput="this.className = ''"></p>
-                            <h> Respostas incorretas </h>
-                            <p><input placeholder="Resposta incorreta 1" oninput="this.className = ''"></p>
-                            <p><input class="url" placeholder="URL da imagem 1" oninput="this.className = ''"></p>
-                            <div class="espaçamento"></div>
-                            <p><input placeholder="Resposta incorreta 2" oninput="this.className = ''"></p>
-                            <p><input class="url" placeholder="URL da imagem 2" oninput="this.className = ''"></p>
-                            <div class="espaçamento"></div>
-                            <p><input placeholder="Resposta incorreta 3" oninput="this.className = ''"></p>
-                            <p><input class="url" placeholder="URL da imagem 3" oninput="this.className = ''"></p>
-                        </div>
 
-                        <div class="tab">
-                            <h> Pergunta 1 </h>
-                            <p><input placeholder="Título do nível" oninput="this.className = ''"></p>
-                            <p><input placeholder="% de acerto mínima" oninput="this.className = ''"></p>
-                            <p><input class="url" placeholder="URL da imagem do nível" oninput="this.className = ''">
-                            </p>
-                            <p><input placeholder="Descrição do nível" oninput="this.className = ''"></p>
-                        </div>
+                            <div class="tab">
+                                <h> Pergunta 1 </h>
+                                <p><input placeholder="Título do nível" oninput="this.className = ''"></p>
+                                <p><input placeholder="% de acerto mínima" oninput="this.className = ''"></p>
+                                <p><input class="url" placeholder="URL da imagem do nível"
+                                        oninput="this.className = ''">
+                                </p>
+                                <p><input placeholder="Descrição do nível" oninput="this.className = ''"></p>
+                            </div>
 
-                        <div class="tab">
-                            <p>é pra ter uma imagem aq</p>
-                            <p>zzz</p>
+                            <div class="tab">
+                                <p>é pra ter uma imagem aq</p>
+                                <p>zzz</p>
+                            </div>
+                            <div class="botao">
+                                <button class="criar-prosseguir" type="button" id="nextBtn"
+                                    onclick="nextPrev(1)">Prosseguir
+                                    pra
+                                    criar perguntas</button>
+                            </div>
+                            <div style="text-align:center;margin-top:40px;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                </div>
-                <div class="botao">
-                    <button class="criar-prosseguir" type="button" id="nextBtn" onclick="nextPrev(1)">Prosseguir pra
-                        criar perguntas</button>
-                </div>
-                <div style="text-align:center;margin-top:40px;">
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-                </div>
-
             </form>
         </div> -->
     </main>
