@@ -15,7 +15,7 @@ obterQuizz();
 
 
 /* Função para mostrar a tela dois quando clicar no quizz */
-function abrirTelaDois(){
+function abrirTelaDois() {
     let corpo = document.querySelector("main")
     corpo.innerHTML = ` <div class="tela-dois">
     <div class="topo-quizz">
@@ -55,82 +55,74 @@ function criarQuiz() {
     corpo.classList.remove("escondido")
     let telaUm = document.querySelector(".tela-um");
     telaUm.classList.add("escondido")
-    let telaDois = document.querySelector(".tela-dois")
+    let telaDois = document.querySelector(".tela-um")
     telaDois.classList.add("escondido")
-}  
+}
 
 
 function showTab(n) {
-    // This function will display the specified tab of the form ...
+    // Para trocar cada aba
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
-    // ... and fix the Previous/Next buttons:
-    if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-    } else {
-        document.getElementById("prevBtn").style.display = "inline";
-    }
+    // Botão prosseguir:
     if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
     }
-    // ... and run a function that displays the correct step indicator:
+    // mostra onde em qual passo você está:
     fixStepIndicator(n)
 }
 
 function nextPrev(n) {
-    // This function will figure out which tab to display
+    // Ela vai colocar qual aba tem que aparecer
     var x = document.getElementsByClassName("tab");
-    // Exit the function if any field in the current tab is invalid:
+    // Se o input estiver vazio ela para de executar
     if (n == 1 && !validateForm()) return false;
-    // Hide the current tab:
+    // Esconde a aba:
     x[currentTab].style.display = "none";
-    // Increase or decrease the current tab by 1:
+    // Aumenta o índice para trocar a aba:
     currentTab = currentTab + n;
-    // if you have reached the end of the form... :
+    // Caso chegue no final do form :
     if (currentTab >= x.length) {
-        //...the form gets submitted:
         document.getElementById("regForm").submit();
         return false;
     }
-    // Otherwise, display the correct tab:
     showTab(currentTab);
 }
 
 function validateForm() {
-    // This function deals with validation of the form fields
+    // Valida os inputs para saber se está tudo certo
     var x, y, i, valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
     z = document.getElementsByClassName("url");
 
-    // A loop that checks every input field in the current tab:
+    // Loop que checa cada input das abas:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
-            // add an "invalid" class to the field:
+            // adiciona classe invalid:
             y[i].className += " invalid";
-            // and set the current valid status to false:
+            // e coloca o status de valid como false:
             valid = false;
         }
     }
     if (valid == false) {
         alert("Por favor insira os dados novamentes")
     }
-    // If the valid status is true, mark the step as finished and valid:
+    // Se valid for true então ele checa o progresso e passa para a próxima aba:
     if (valid) {
         document.getElementsByClassName("step")[currentTab].className += " finish";
     }
-    return valid; // return the valid status
+    return valid; // retorna se valid é true ou false
 }
 
 function fixStepIndicator(n) {
-    // This function removes the "active" class of all steps...
+    // Remove a classe "active" e adiciona para a aba que realmente está ativa
     var i, x = document.getElementsByClassName("step");
     for (i = 0; i < x.length; i++) {
         x[i].className = x[i].className.replace(" active", "");
     }
-    //... and adds the "active" class to the current step:
     x[n].className += " active";
 }
