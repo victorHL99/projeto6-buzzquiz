@@ -137,6 +137,7 @@ header>.titulo {
 .imagem-quizz{
     width: auto;
     height: auto;
+    margin-top: 14px;
 }
 .imagem-quizz  img{
     width: 340px;
