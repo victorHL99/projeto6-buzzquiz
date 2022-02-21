@@ -143,8 +143,8 @@ header>.titulo {
     width: 340px;
     height: 181px;
     border-radius: 5px;
-    background-image:
-        linear-gradient(180deg, rgba(255, 255, 255, 0)0%,
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0)0%,
             rgba(0, 0, 0, 0.5)64.58%,
             #000000 100%);
 }
@@ -182,10 +182,15 @@ header>.titulo {
         linear-gradient(0deg,
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.6)),
-        url(/imgteste/as-20-melhores-praias-do-brasil.png);
 }
 
-.topo-quizz p {
+.topo-quizz img{
+    width: 375px;
+    height: 142px;
+    opacity: 60%;
+}
+
+.titulo-quizz-banner{
     width: 309px;
     height: 54px;
     font-family: 'Roboto', sans-serif;
