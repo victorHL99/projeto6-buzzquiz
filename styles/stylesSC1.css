@@ -202,8 +202,8 @@ header>.titulo {
 .pergunta-quizz{
     width: 100vw;
     height: 436px;
-    background-color: #b9b9b9;
     margin-top:  24px;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     flex-direction: column;
