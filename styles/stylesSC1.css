@@ -303,6 +303,72 @@ header>.titulo {
     margin-top: 5px;
 }
 
+/*--------------- TELA 2 - TELA FINALIZADO ---------------*/
+.quizz-finalizado{
+    width: 374px;
+    height: 500px;
+    background-color: blue;
+    position: absolute;
+    top: 189px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-finalizado{
+    width: 340px;
+    height: 99px;
+    background-color: #EC362D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-finalizado p{
+    width: 308px;
+    height: 54px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.img-finalizado{
+    width: 340px;
+    height: 255px;
+    background-color: white;
+    margin-top: 9px;
+}
+
+.txt-finalizado{
+    width: 340px;
+    height: 96px;
+    margin-top: 9px;
+}
+
+.txt-finalizado p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color:  #484848;
+    ;
+}
+
+.respondida {
+    background-color: #04AA6D;
+}
+
+
 /*--------------- MAIN - TELA 3 ---------------*/
 
 .tela-tres {

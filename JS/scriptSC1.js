@@ -15,7 +15,7 @@ obterQuizz();
 
 
 /* Função para mostrar a tela dois quando clicar no quizz */
-function abrirTelaDois(){
+function abrirTelaDois() {
     let corpo = document.querySelector("main")
     corpo.innerHTML = ` <div class="tela-dois">
     <div class="topo-quizz">
@@ -44,7 +44,18 @@ function abrirTelaDois(){
                 <p>Gatíneo 4</p>
             </div>
         </div>
-    </div>`
+    </div>
+    
+    <div class="quizz-finalizado escondido">
+    <div class="topo-finalizado">
+        <p>88% de acerto: Você é praticamente um aluno de Hogwarts!</p>
+    </div>
+    <div class="img-finalizado"> é pra ter uma imagem aqui</div>
+    <div class="txt-finalizado"> 
+        <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
+    </div>
+
+</div>`
 }
 
 // click no botão criar quizz e retira a classe escondida da tela 3 e 
@@ -57,7 +68,7 @@ function criarQuiz() {
     telaUm.classList.add("escondido")
     let telaDois = document.querySelector(".tela-dois")
     telaDois.classList.add("escondido")
-}  
+}
 
 
 function showTab(n) {
