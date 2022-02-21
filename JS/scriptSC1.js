@@ -118,7 +118,7 @@ function nextPrev(n) {
 
 function validateForm() {
     // Valida os inputs para saber se está tudo certo
-    let x, y, i, titulo, quantidadePergunta, url, url2, url3, url4, url5, corFundo, textopergunta2, valid = true;
+    let x, y, i, titulo, quantidadePergunta, url, url2, url3, url4, url5,url6, corFundo, textopergunta2, valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
     url = String(document.getElementById("url1").value);
@@ -126,17 +126,22 @@ function validateForm() {
     url3 = String(document.getElementById("url3").value);
     url4 = String(document.getElementById("url4").value);
     url5 = String(document.getElementById("url5").value);
+    url6 = String(document.getElementById("url6").value);
     titulo = String(document.getElementById("titulo-pergunta").value).length;
     corFundo = String(document.getElementById("cor-de-fundo").value);
     quantidadePergunta = parseInt(document.getElementById("quantidade-perguntas").value)
     quantidadeNivel = parseInt(document.getElementById("quantidade-nivel").value)
     textopergunta2 = String(document.getElementById("texto-pergunta2").value).length
+    tituloNivel = String(document.getElementById("titulo-nivel").value).length
+    porcentagem = String(document.getElementById("porcentagem").value)
+    textoGrande= String(document.getElementById("textoGrande").value).length;
     let colorCheck = corFundo.includes("#")
     let urlCheck = url.includes("https://")
     let urlCheck2 = url2.includes("https://")
     let urlCheck3 = url3.includes("https://")
     let urlCheck4 = url4.includes("https://")
     let urlCheck5 = url5.includes("https://")
+    let urlCheck6 = url6.includes("https://")
 
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
@@ -193,6 +198,21 @@ function validateForm() {
         valid = false
     }
     if (currentTab == 1 && urlCheck5 == false) {
+        valid = false
+    }
+    if(currentTab == 3 && tituloNivel < 10){
+        valid = false
+    }
+    if(currentTab == 3 && porcentagem < 0){
+        valid = false
+    }
+    if(currentTab == 3 && porcentagem > 100){
+        valid = false
+    }
+    if (currentTab == 3 && urlCheck6 == false) {
+        valid = false
+    }
+    if(currentTab == 3 && textoGrande < 30){
         valid = false
     }
     if (valid == false) {

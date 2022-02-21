@@ -537,6 +537,10 @@ input.invalid {
     height: 32px;
 }
 
+.textoGrande{
+    height: 177px;
+}
+
 /* Mark the active step: */
 .step {
     margin-top: 90px;
