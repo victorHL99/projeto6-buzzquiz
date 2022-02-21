@@ -53,7 +53,7 @@ header>.titulo {
     justify-content: center;
     flex-direction: column;
     margin-left: 18px;
-    
+
 }
 
 .quizz-usuario {
@@ -95,9 +95,10 @@ header>.titulo {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.criar-quizz > p {
+.criar-quizz>p {
     width: 136px;
     height: 40px;
     font-family: 'Roboto', sans-serif;
@@ -117,7 +118,7 @@ header>.titulo {
     width: 340px;
     height: auto;
     margin-top: 35px;
-    
+
 }
 
 .todos-quizz>h2 {
@@ -133,20 +134,20 @@ header>.titulo {
     text-align: center;
 }
 
-.imagem-quizz{
+.imagem-quizz {
     width: 340px;
     height: 181px;
     margin-top: 14px;
     border-radius: 5px;
-    background-image: 
-    linear-gradient(180deg, rgba(255, 255, 255, 0)0%,
-    rgba(0, 0, 0, 0.1)95.58%,
-    #000000 100%),
-    url(/imgteste/as-20-melhores-praias-do-brasil.png);
-    
+    background-image:
+        linear-gradient(180deg, rgba(255, 255, 255, 0)0%,
+            rgba(0, 0, 0, 0.1)95.58%,
+            #000000 100%),
+        url(/imgteste/as-20-melhores-praias-do-brasil.png);
+
 }
 
-.titulo-quizz{
+.titulo-quizz {
     width: 301px;
     height: 54px;
     margin-left: 36px;
@@ -164,7 +165,7 @@ header>.titulo {
 
 /*--------------- MAIN - TELA 2 ---------------*/
 
-.tela-dois{
+.tela-dois {
     width: 100vw;
     height: 100vh;
     margin-top: 69px;
@@ -172,17 +173,17 @@ header>.titulo {
     z-index: 2;
 }
 
-.topo-quizz{
+.topo-quizz {
     width: 375px;
     height: 142px;
-    background: 
-    linear-gradient(0deg,
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.6)),
-    url(/imgteste/as-20-melhores-praias-do-brasil.png);
+    background:
+        linear-gradient(0deg,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url(/imgteste/as-20-melhores-praias-do-brasil.png);
 }
 
-.topo-quizz >p{
+.topo-quizz>p {
     width: 309px;
     height: 54px;
     font-family: 'Roboto', sans-serif;
@@ -199,25 +200,25 @@ header>.titulo {
     margin-top: 44px;
 }
 
-.pergunta-quizz{
+.pergunta-quizz {
     width: 100vw;
     height: 436px;
     background-color: #b9b9b9;
-    margin-top:  24px;
+    margin-top: 24px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.topo-pergunta-quizz{
+.topo-pergunta-quizz {
     width: 340px;
     height: 89px;
     margin-top: 18px;
     background-color: #434CA0;
 }
 
-.topo-pergunta-quizz >p{
+.topo-pergunta-quizz>p {
     width: 308px;
     height: 54px;
     font-family: 'Roboto', sans-serif;
@@ -234,7 +235,7 @@ header>.titulo {
     margin-top: 20px;
 }
 
-.respostas-pergunta-quizz{
+.respostas-pergunta-quizz {
     width: 340px;
     height: 316px;
     margin-top: 12px;
@@ -245,18 +246,19 @@ header>.titulo {
     flex-wrap: wrap;
 }
 
-.alternativa-respostas-pergunta-quizz{
+.alternativa-respostas-pergunta-quizz {
     width: 163px;
     height: 140px;
 }
-.alternativa-respostas-pergunta-quizz > .img{
+
+.alternativa-respostas-pergunta-quizz>.img {
     width: 163px;
-    height:113px;
+    height: 113px;
     background-image: url(/imgteste/image\ 3.png);
 
 }
 
-.alternativa-respostas-pergunta-quizz > p{
+.alternativa-respostas-pergunta-quizz>p {
     width: 163px;
     height: 22px;
     font-family: 'Roboto', sans-serif;
@@ -269,3 +271,125 @@ header>.titulo {
     color: #000000;
     margin-top: 5px;
 }
+
+/*--------------- MAIN - TELA 3 ---------------*/
+
+.tela-tres {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 69px;
+    background-color: purple;
+    z-index: 2;
+}
+
+.topo-criar {
+    width: 375px;
+    height: 89px;
+    background-color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 69px;
+}
+
+.topo-criar>p {
+    width: 309px;
+    height: 54px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23.44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.pergunta-criar1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: purple;
+    margin-top: 89px;
+}
+
+.container-pergunta {
+    width: 100%;
+    position: absolute;
+    top: 158px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+input {
+    padding: 15px;
+    width: 100%;
+    font-size: 17px;
+    font-style: italic;
+    font-family: Roboto;
+    border: 1px solid #D1D1D1;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 4.5px;
+    margin-bottom: 4.5px;
+}
+
+input.invalid {
+    background-color: #ffdddd;
+  }
+  
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.criar-prosseguir {
+    width: 324px;
+    height: 54px;
+    border: 0px;
+    background: #EC362D;
+    border-radius: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFF5F4;
+}
+
+.tab {
+    width: 100%;
+    display: none;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+
+  .escondido{
+    display: none;
+  }
