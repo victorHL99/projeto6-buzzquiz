@@ -104,12 +104,14 @@ function nextPrev(n) {
 
 function validateForm() {
     // Valida os inputs para saber se está tudo certo
-    var x, y, i, valid = true;
+    let x, y, i, titulo,quantidadePergunta, valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
-    z = document.getElementsByClassName("url");
-
-    // Loop que checa cada input das abas:
+    url = String(document.getElementById("url1").value);
+    titulo = String(document.getElementById("titulo-pergunta").value).length;
+    quantidadePergunta = parseInt(document.getElementById("quantidade-perguntas").value)
+    quantidadeNivel = parseInt(document.getElementById("quantidade-nivel").value)
+    let urlCheck = url.includes("https://")
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
         if (y[i].value == "") {
@@ -118,6 +120,9 @@ function validateForm() {
             // e coloca o status de valid como false:
             valid = false;
         }
+    }
+    if(titulo < 20 || titulo > 65 || quantidadePergunta < 3 || urlCheck == false || quantidadeNivel < 2){
+        valid= false
     }
     if (valid == false) {
         alert("Por favor insira os dados novamentes")
