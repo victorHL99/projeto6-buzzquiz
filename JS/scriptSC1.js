@@ -10,7 +10,7 @@ const promiseQuizz = axios.get('https://mock-api.driven.com.br/api/v4/buzzquizz/
 
 function obterQuizz() {
     const promiseQuizz = axios.get('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes');
-    promiseQuizz.then(console.log)
+    promiseQuizz.then(telaCarregar)
     promiseQuizz.then(mostrarQuizzes)
 
 }
@@ -247,4 +247,10 @@ for (i = 0; i < dropdown.length; i++) {
             dropdownContent.style.display = "block";
         }
     });
+}
+
+function telaCarregar(resposta){
+    var x = document.getElementsByClassName("loader");
+    x.style.display = "block"
+    mostrarQuizzes(resposta)
 }

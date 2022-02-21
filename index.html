@@ -43,6 +43,7 @@
                 <div class="todos-quizz">
                     <h2>Todos os Quizzes</h2>
                     <div class="lista-quizz-servidor">
+                        <div class="loader"></div>
                         <div class="display-quizz" onclick="abrirTelaDois()">
                             <div class="imagem-quizz">
                                 <div class="titulo-quizz">
@@ -125,7 +126,7 @@
                                 <p> Crie suas perguntas </p>
                             </div>
                             <div class="dropdown">
-                                <p> Pergunta 1 </p>
+                                <p> Pergunta 1 </p> <ion-icon name="create-outline"></ion-icon>
                             </div>
                             <div class="dropdown-container">
                                 <h> Pergunta 1 </h>
@@ -154,7 +155,7 @@
                                 <p> Agora, decida os níveis! </p>
                             </div>
                             <div class="dropdown">
-                                <p> Nível 1 </p>
+                                <p> Nível 1 </p> <ion-icon name="create-outline"></ion-icon>
                             </div>
                             <h> Pergunta 1 </h>
                             <p><input id="titulo-nivel"placeholder="Título do nível" oninput="this.className = ''"></p>
@@ -185,6 +186,7 @@
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="JS/scriptSC1.js"></script>
     <script src="JS/scriptSC2.js"></script>
 
