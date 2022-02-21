@@ -3,6 +3,7 @@
 //const nomeUsuario = prompt("Qual o seu nome de usuario")
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
+const promiseQuizz = axios.get('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes');
 
 
 /*----- FUNÇÃO PARA OBTER QUIZZ DO SERVIDOR ----- */
@@ -22,7 +23,10 @@ function mostrarQuizzes(resposta) {
     let tituloQuizz = document.querySelector(".titulo-quizz");
     let todosQuizzes = document.querySelector(".lista-quizz-servidor")
     let tamanhoArray = resposta.data.length
+    let teste = resposta.data[i]
+    let banner = document.querySelector(".topo-quizz")
 
+    
     imagemQuizz.src = resposta.data[i].image
     tituloQuizz.src = resposta.data[i].title
 
@@ -37,12 +41,21 @@ function mostrarQuizzes(resposta) {
         </div>
         </div>
         </div>`
-
-        imagemQuizz.style.url = `${resposta.data[i].image}`
-        console.log(imagemQuizz.style.url)
-
+        
     }
+    
+    console.log(teste)
+    
+    banner.innerHTML += `
+    <img src=${teste.image} alt="">
+    <div class="titulo-quizz-banner">${teste.title}</div>
+    
+    `
+
+    
+
 }
+
 
 
 /* Função para mostrar a tela dois quando clicar no quizz */
@@ -55,7 +68,8 @@ function abrirTelaDois() {
     abrirTelaDois.classList.remove("escondido")
     fecharTelaUm.classList.add("escondido")
     fecharTelaTres.classList.add("escondido")
-    adicionarTitulo();
+
+    
 }
 
 // click no botão criar quizz e retira a classe escondida da tela 3 e 
