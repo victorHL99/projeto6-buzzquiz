@@ -29,6 +29,11 @@ function adicionarClasseRespondida() {
 
 }
 
+//função para verificar se todas as perguntas foram respondidas
+function verificarRespondidos(){
+
+}
+
 
 // função deve mostrar a parte de resultado assim que tdoas as perguntas
 // tiverem sido respondidas
@@ -46,6 +51,7 @@ function mostrarResultado() {
     }
 
 }
+
 
 
 function verificarResposta() {
