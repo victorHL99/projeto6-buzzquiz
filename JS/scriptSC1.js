@@ -10,52 +10,52 @@ showTab(currentTab); // Display the current tab
 function obterQuizz() {
     const promiseQuizz = axios.get('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes');
     promiseQuizz.then(console.log)
+    promiseQuizz.then(mostrarQuizzes)
+    
 }
 obterQuizz();
+
+// função para mostrar os quizzes na tela (NÃO RESOLVI O PROBLEMA AINDA)
+function mostrarQuizzes(resposta) {
+    let i = 0;
+    let imagemQuizz = document.querySelector(".imagem-quizz");
+    let tituloQuizz = document.querySelector(".titulo-quizz");
+    let todosQuizzes = document.querySelector(".lista-quizz-servidor")
+    let tamanhoArray = resposta.data.length
+
+    imagemQuizz.src = resposta.data[i].image
+    tituloQuizz.src = resposta.data[i].title
+    
+    todosQuizzes.innerHTML = ``
+    for (i; i < tamanhoArray; i++) {
+        todosQuizzes.innerHTML += `
+        <div class="lista-quizz-servidor">
+        <div class="display-quizz" onclick="abrirTelaDois()">
+        <div class="imagem-quizz">
+        <img src=${resposta.data[i].image} alt="">
+        <div class="titulo-quizz">${resposta.data[i].title}</div>
+        </div>
+        </div>
+        </div>`
+
+        imagemQuizz.style.url = `${resposta.data[i].image}`
+        console.log(imagemQuizz.style.url)
+
+    }
+}
 
 
 /* Função para mostrar a tela dois quando clicar no quizz */
 function abrirTelaDois() {
-    let corpo = document.querySelector("main")
-    corpo.innerHTML = ` <div class="tela-dois">
-    <div class="topo-quizz">
-        <p>Você entende bem sobre as praias do Brasil?</p>
-    </div>
+    let fecharTelaUm = document.querySelector(".tela-um")
+    let abrirTelaDois = document.querySelector(".tela-dois")
+    let fecharTelaTres = document.querySelector(".tela-tres")
 
-    <div class="pergunta-quizz">
-        <div class="topo-pergunta-quizz">
-            <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
-        </div>
-        <div class="respostas-pergunta-quizz">
-            <div  onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
-                <div class="img"></div>
-                <p>Gatíneo 1</p>
-            </div>
-            <div onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
-                <div class="img"></div>
-                <p>Gatíneo 2</p>
-            </div>
-            <div onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
-                <div class="img"></div>
-                <p>Gatíneo 3 </p>
-            </div>
-            <div onclick="escolherResposta(this)" class="alternativa-respostas-pergunta-quizz">
-                <div class="img"></div>
-                <p>Gatíneo 4</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="quizz-finalizado escondido">
-    <div class="topo-finalizado">
-        <p>88% de acerto: Você é praticamente um aluno de Hogwarts!</p>
-    </div>
-    <div class="img-finalizado"> é pra ter uma imagem aqui</div>
-    <div class="txt-finalizado"> 
-        <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
-    </div>
 
-</div>`
+    abrirTelaDois.classList.remove("escondido")
+    fecharTelaUm.classList.add("escondido")
+    fecharTelaTres.classList.add("escondido")
+    adicionarTitulo();
 }
 
 // click no botão criar quizz e retira a classe escondida da tela 3 e 
